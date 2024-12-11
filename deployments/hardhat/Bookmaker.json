@@ -1,0 +1,559 @@
+{
+  "address": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+  "abi": [
+    {
+      "inputs": [],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_eventId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bool",
+          "name": "_isTrue",
+          "type": "bool"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "bet",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "bets",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "amount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bool",
+          "name": "isTrue",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "bookmakerFee",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "bookmakerFeePercentage",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "bookmakerFees",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_bookmakerFee",
+          "type": "uint256"
+        },
+        {
+          "internalType": "address",
+          "name": "_token",
+          "type": "address"
+        }
+      ],
+      "name": "createEvent",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_eventId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_bookmakerFee",
+          "type": "uint256"
+        }
+      ],
+      "name": "editEvent",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "eventCount",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "events",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "owner",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "bookmakerFee",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "trueAmount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "falseAmount",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bool",
+          "name": "finished",
+          "type": "bool"
+        },
+        {
+          "internalType": "bool",
+          "name": "winner",
+          "type": "bool"
+        },
+        {
+          "internalType": "address",
+          "name": "token",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "finalCoefficient",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_eventId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bool",
+          "name": "_winner",
+          "type": "bool"
+        }
+      ],
+      "name": "finishEvent",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_eventId",
+          "type": "uint256"
+        }
+      ],
+      "name": "getEvent",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "owner",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "bookmakerFee",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "trueAmount",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "falseAmount",
+              "type": "uint256"
+            },
+            {
+              "internalType": "bool",
+              "name": "finished",
+              "type": "bool"
+            },
+            {
+              "internalType": "bool",
+              "name": "winner",
+              "type": "bool"
+            },
+            {
+              "internalType": "address",
+              "name": "token",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "finalCoefficient",
+              "type": "uint256"
+            }
+          ],
+          "internalType": "struct Event",
+          "name": "",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_eventId",
+          "type": "uint256"
+        }
+      ],
+      "name": "withdraw",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_eventId",
+          "type": "uint256"
+        }
+      ],
+      "name": "withdrawBookmaker",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0xeb9993b998de2000f51728d5a29cc4dba94c0296433dd6481e70785fd6c9f888",
+  "receipt": {
+    "to": null,
+    "from": "0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266",
+    "contractAddress": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+    "transactionIndex": 0,
+    "gasUsed": "913443",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0x90d7b324b78e36a63fa576534413c78d5869ae73d2a5a3486b53785ff0176e6a",
+    "transactionHash": "0xeb9993b998de2000f51728d5a29cc4dba94c0296433dd6481e70785fd6c9f888",
+    "logs": [],
+    "blockNumber": 1,
+    "cumulativeGasUsed": "913443",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [],
+  "numDeployments": 1,
+  "solcInputHash": "296e8bd70855d68bfa6b6452dad38389",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.27+commit.40a35a09\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_eventId\",\"type\":\"uint256\"},{\"internalType\":\"bool\",\"name\":\"_isTrue\",\"type\":\"bool\"},{\"internalType\":\"uint256\",\"name\":\"_amount\",\"type\":\"uint256\"}],\"name\":\"bet\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"bets\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"amount\",\"type\":\"uint256\"},{\"internalType\":\"bool\",\"name\":\"isTrue\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"bookmakerFee\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"bookmakerFeePercentage\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"name\":\"bookmakerFees\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_bookmakerFee\",\"type\":\"uint256\"},{\"internalType\":\"address\",\"name\":\"_token\",\"type\":\"address\"}],\"name\":\"createEvent\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_eventId\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"_bookmakerFee\",\"type\":\"uint256\"}],\"name\":\"editEvent\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"eventCount\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"events\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"bookmakerFee\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"trueAmount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"falseAmount\",\"type\":\"uint256\"},{\"internalType\":\"bool\",\"name\":\"finished\",\"type\":\"bool\"},{\"internalType\":\"bool\",\"name\":\"winner\",\"type\":\"bool\"},{\"internalType\":\"address\",\"name\":\"token\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"finalCoefficient\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_eventId\",\"type\":\"uint256\"},{\"internalType\":\"bool\",\"name\":\"_winner\",\"type\":\"bool\"}],\"name\":\"finishEvent\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_eventId\",\"type\":\"uint256\"}],\"name\":\"getEvent\",\"outputs\":[{\"components\":[{\"internalType\":\"address\",\"name\":\"owner\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"bookmakerFee\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"trueAmount\",\"type\":\"uint256\"},{\"internalType\":\"uint256\",\"name\":\"falseAmount\",\"type\":\"uint256\"},{\"internalType\":\"bool\",\"name\":\"finished\",\"type\":\"bool\"},{\"internalType\":\"bool\",\"name\":\"winner\",\"type\":\"bool\"},{\"internalType\":\"address\",\"name\":\"token\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"finalCoefficient\",\"type\":\"uint256\"}],\"internalType\":\"struct Event\",\"name\":\"\",\"type\":\"tuple\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_eventId\",\"type\":\"uint256\"}],\"name\":\"withdraw\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_eventId\",\"type\":\"uint256\"}],\"name\":\"withdrawBookmaker\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/Bookmaker.sol\":\"Bookmaker\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":1000},\"remappings\":[]},\"sources\":{\"contracts/Bookmaker.sol\":{\"content\":\"// SPDX-License-Identifier: UNLICENSED\\npragma solidity ^0.8.15;\\n\\n// Uncomment this line to use console.log\\n// import \\\"hardhat/console.sol\\\";\\n\\ninterface IERC20 {\\n    function transfer(address to, uint256 amount) external returns (bool);\\n    function transferFrom(address from, address to, uint256 amount) external returns (bool);\\n    function balanceOf(address account) external view returns (uint256);\\n}\\n\\nstruct Bet {\\n    uint256 amount;\\n    bool isTrue;\\n}\\n\\nstruct Event {\\n    address owner;\\n    uint256 bookmakerFee;\\n    uint256 trueAmount;\\n    uint256 falseAmount;\\n    bool finished;\\n    bool winner;\\n    address token;\\n    uint256 finalCoefficient;\\n}\\n\\ncontract Bookmaker {\\n    address public owner;\\n    uint public bookmakerFee;\\n    uint public bookmakerFeePercentage;\\n\\n    mapping(uint256 => Event) public events;\\n    mapping(uint256 => mapping(address => Bet)) public bets;\\n    mapping(address => uint256) public bookmakerFees;\\n    uint256 public eventCount;\\n\\n    constructor() {}\\n    \\n    function createEvent(uint256 _bookmakerFee, address _token) public {\\n        Event memory _event = Event({\\n            owner: msg.sender,\\n            bookmakerFee: _bookmakerFee,\\n            trueAmount: 0,\\n            falseAmount: 0,\\n            finished: false,\\n            winner: false,\\n            token: _token,\\n            finalCoefficient: 0\\n        });\\n        events[eventCount] = _event;\\n        eventCount++;\\n    }\\n\\n    function getEvent(uint256 _eventId) public view returns (Event memory) {\\n        return events[_eventId];\\n    }\\n\\n    function editEvent(uint256 _eventId, uint256 _bookmakerFee) public {\\n        require(msg.sender == events[_eventId].owner, \\\"You are not the owner of this event\\\");\\n        events[_eventId].bookmakerFee = _bookmakerFee;\\n    }\\n\\n    function finishEvent(uint256 _eventId, bool _winner) public {\\n        require(msg.sender == events[_eventId].owner, \\\"You are not the owner of this event\\\");\\n        events[_eventId].finished = true;\\n        events[_eventId].winner = _winner;\\n        if (_winner) {\\n            events[_eventId].finalCoefficient = events[_eventId].falseAmount == 0 ? 0 : events[_eventId].trueAmount * 1000000 / events[_eventId].falseAmount;\\n        } else {\\n            events[_eventId].finalCoefficient = events[_eventId].trueAmount == 0 ? 0 : events[_eventId].falseAmount * 1000000 / events[_eventId].trueAmount;\\n        }\\n        bookmakerFees[events[_eventId].owner] += events[_eventId].bookmakerFee * (events[_eventId].trueAmount + events[_eventId].falseAmount);\\n    }\\n\\n    function bet(uint256 _eventId, bool _isTrue, uint256 _amount) public {\\n        require(events[_eventId].finished == false, \\\"Event is finished\\\");\\n        \\n        IERC20 token = IERC20(events[_eventId].token);\\n        token.transferFrom(msg.sender, address(this), _amount);\\n\\n        if (_isTrue) {\\n            events[_eventId].trueAmount += _amount;\\n        } else {\\n            events[_eventId].falseAmount += _amount;\\n        }\\n\\n        bets[_eventId][msg.sender] = Bet({\\n            amount: _amount,\\n            isTrue: _isTrue\\n        });\\n    }\\n    \\n    function withdraw(uint256 _eventId) public {\\n        require(events[_eventId].finished == true, \\\"Event is not finished\\\");\\n        require(events[_eventId].winner == true, \\\"You are not the winner\\\");\\n        require(bets[_eventId][msg.sender].amount > 0, \\\"You have no bets on this event\\\");\\n\\n        IERC20 token = IERC20(events[_eventId].token);\\n        token.transfer(msg.sender, bets[_eventId][msg.sender].amount * (1 + events[_eventId].finalCoefficient / 1000000 - events[_eventId].bookmakerFee / 10000));\\n        \\n        delete bets[_eventId][msg.sender];\\n    }\\n\\n    function withdrawBookmaker(uint256 _eventId) public {\\n        require(msg.sender == events[_eventId].owner, \\\"You are not the owner of this event\\\");\\n        require(events[_eventId].finished == true, \\\"Event is not finished\\\");\\n\\n        IERC20 token = IERC20(events[_eventId].token);\\n        token.transfer(msg.sender, bookmakerFees[events[_eventId].owner]);\\n    }\\n}\\n\",\"keccak256\":\"0x7bfd66ad06a931cd374e72e89ebcb774c434122dca86930c33d7573630f424f0\",\"license\":\"UNLICENSED\"}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50610f988061001f6000396000f3fe608060405234801561001057600080fd5b50600436106100ea5760003560e01c80638da5cb5b1161008c578063b2176d3911610066578063b2176d3914610345578063c062109114610358578063f644b3bb14610361578063fdedc766146103ab57600080fd5b80638da5cb5b146102fe5780638decaec014610329578063acddb6261461033c57600080fd5b80632e1a7d4d116100c85780632e1a7d4d146101d25780633fad7355146101e55780636d1884e01461021357806371be2e4a146102f557600080fd5b80630b511903146100ef5780630b791430146101045780632d40caaf146101bf575b600080fd5b6101026100fd366004610d1e565b6103be565b005b61016b610112366004610d40565b60036020819052600091825260409091208054600182015460028301549383015460048401546005909401546001600160a01b039384169592949293919260ff8082169361010083049091169262010000909204169088565b604080516001600160a01b03998a168152602081019890985287019590955260608601939093529015156080850152151560a084015290921660c082015260e0810191909152610100015b60405180910390f35b6101026101cd366004610d6a565b61044a565b6101026101e0366004610d40565b610635565b6102056101f3366004610db6565b60056020526000908152604090205481565b6040519081526020016101b6565b6102e8610221366004610d40565b6040805161010081018252600080825260208201819052918101829052606081018290526080810182905260a0810182905260c0810182905260e0810191909152506000908152600360208181526040928390208351610100808201865282546001600160a01b039081168352600184015494830194909452600283015495820195909552928101546060840152600481015460ff80821615156080860152948104909416151560a0840152620100009093041660c082015260059091015460e082015290565b6040516101b69190610dd8565b61020560065481565b600054610311906001600160a01b031681565b6040516001600160a01b0390911681526020016101b6565b610102610337366004610e4d565b6108b9565b61020560015481565b610102610353366004610d40565b610a6c565b61020560025481565b61039661036f366004610e85565b60046020908152600092835260408084209091529082529020805460019091015460ff1682565b604080519283529015156020830152016101b6565b6101026103b9366004610e85565b610c04565b6000828152600360205260409020546001600160a01b031633146104355760405162461bcd60e51b815260206004820152602360248201527f596f7520617265206e6f7420746865206f776e6572206f662074686973206576604482015262195b9d60ea1b60648201526084015b60405180910390fd5b60009182526003602052604090912060010155565b6000828152600360205260409020546001600160a01b031633146104bc5760405162461bcd60e51b815260206004820152602360248201527f596f7520617265206e6f7420746865206f776e6572206f662074686973206576604482015262195b9d60ea1b606482015260840161042c565b60008281526003602052604090206004018054821580156101000261ffff199092169190911760011790915561055557600082815260036020819052604090912001541561053b5760008281526003602081905260409091209081015460029091015461052c90620f4240610ec7565b6105369190610ee4565b61053e565b60005b6000838152600360205260409020600501556105b7565b600082815260036020526040902060020154156105a1576000828152600360208190526040909120600281015491015461059290620f4240610ec7565b61059c9190610ee4565b6105a4565b60005b6000838152600360205260409020600501555b6000828152600360208190526040909120908101546002909101546105dc9190610f06565b6000838152600360205260409020600101546105f89190610ec7565b6000838152600360209081526040808320546001600160a01b0316835260059091528120805490919061062c908490610f06565b90915550505050565b60008181526003602052604090206004015460ff16151560011461069b5760405162461bcd60e51b815260206004820152601560248201527f4576656e74206973206e6f742066696e69736865640000000000000000000000604482015260640161042c565b60008181526003602052604090206004015460ff6101009091041615156001146107075760405162461bcd60e51b815260206004820152601660248201527f596f7520617265206e6f74207468652077696e6e657200000000000000000000604482015260640161042c565b600081815260046020908152604080832033845290915290205461076d5760405162461bcd60e51b815260206004820152601e60248201527f596f752068617665206e6f2062657473206f6e2074686973206576656e740000604482015260640161042c565b60008181526003602052604090206004810154600190910154620100009091046001600160a01b031690819063a9059cbb9033906107ae9061271090610ee4565b6000868152600360205260409020600501546107ce90620f424090610ee4565b6107d9906001610f06565b6107e39190610f19565b60008681526004602090815260408083203384529091529020546108079190610ec7565b6040517fffffffff0000000000000000000000000000000000000000000000000000000060e085901b1681526001600160a01b03909216600483015260248201526044016020604051808303816000875af115801561086a573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061088e9190610f2c565b505060009081526004602090815260408083203384529091528120908155600101805460ff19169055565b60008381526003602052604090206004015460ff161561091b5760405162461bcd60e51b815260206004820152601160248201527f4576656e742069732066696e6973686564000000000000000000000000000000604482015260640161042c565b6000838152600360205260409081902060049081015491517f23b872dd000000000000000000000000000000000000000000000000000000008152339181019190915230602482015260448101839052620100009091046001600160a01b03169081906323b872dd906064016020604051808303816000875af11580156109a6573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906109ca9190610f2c565b5082156109fd57600084815260036020526040812060020180548492906109f2908490610f06565b90915550610a249050565b60008481526003602081905260408220018054849290610a1e908490610f06565b90915550505b50604080518082018252918252911515602080830191825260009485526004815283852033865290529190922091518255516001909101805460ff1916911515919091179055565b6000818152600360205260409020546001600160a01b03163314610ade5760405162461bcd60e51b815260206004820152602360248201527f596f7520617265206e6f7420746865206f776e6572206f662074686973206576604482015262195b9d60ea1b606482015260840161042c565b60008181526003602052604090206004015460ff161515600114610b445760405162461bcd60e51b815260206004820152601560248201527f4576656e74206973206e6f742066696e69736865640000000000000000000000604482015260640161042c565b600081815260036020908152604080832060048082015491546001600160a01b0390811686526005909452938290205491517fa9059cbb000000000000000000000000000000000000000000000000000000008152339481019490945260248401919091526201000090041690819063a9059cbb906044016020604051808303816000875af1158015610bdb573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190610bff9190610f2c565b505050565b60408051610100808201835233825260208083018681526000848601818152606086018281526080870183815260a088018481526001600160a01b038b811660c08b0190815260e08b0187815260068054895260039a8b90529c88208c5181547fffffffffffffffffffffffff000000000000000000000000000000000000000016908516178155985160018a01559551600289015593519787019790975590516004860180549251935161ffff1990931691151561ff00191691909117921515909702919091177fffffffffffffffffffff0000000000000000000000000000000000000000ffff166201000091909516029390931790935590516005909101558254919290610d1483610f49565b9190505550505050565b60008060408385031215610d3157600080fd5b50508035926020909101359150565b600060208284031215610d5257600080fd5b5035919050565b8015158114610d6757600080fd5b50565b60008060408385031215610d7d57600080fd5b823591506020830135610d8f81610d59565b809150509250929050565b80356001600160a01b0381168114610db157600080fd5b919050565b600060208284031215610dc857600080fd5b610dd182610d9a565b9392505050565b6000610100820190506001600160a01b03835116825260208301516020830152604083015160408301526060830151606083015260808301511515608083015260a0830151151560a083015260c0830151610e3e60c08401826001600160a01b03169052565b5060e092830151919092015290565b600080600060608486031215610e6257600080fd5b833592506020840135610e7481610d59565b929592945050506040919091013590565b60008060408385031215610e9857600080fd5b82359150610ea860208401610d9a565b90509250929050565b634e487b7160e01b600052601160045260246000fd5b8082028115828204841417610ede57610ede610eb1565b92915050565b600082610f0157634e487b7160e01b600052601260045260246000fd5b500490565b80820180821115610ede57610ede610eb1565b81810381811115610ede57610ede610eb1565b600060208284031215610f3e57600080fd5b8151610dd181610d59565b600060018201610f5b57610f5b610eb1565b506001019056fea2646970667358221220aee53b8e3c5d86d5b0b5c90187506ba8078fd4f3d54eca880a18cc416ee68abf64736f6c634300081b0033",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100ea5760003560e01c80638da5cb5b1161008c578063b2176d3911610066578063b2176d3914610345578063c062109114610358578063f644b3bb14610361578063fdedc766146103ab57600080fd5b80638da5cb5b146102fe5780638decaec014610329578063acddb6261461033c57600080fd5b80632e1a7d4d116100c85780632e1a7d4d146101d25780633fad7355146101e55780636d1884e01461021357806371be2e4a146102f557600080fd5b80630b511903146100ef5780630b791430146101045780632d40caaf146101bf575b600080fd5b6101026100fd366004610d1e565b6103be565b005b61016b610112366004610d40565b60036020819052600091825260409091208054600182015460028301549383015460048401546005909401546001600160a01b039384169592949293919260ff8082169361010083049091169262010000909204169088565b604080516001600160a01b03998a168152602081019890985287019590955260608601939093529015156080850152151560a084015290921660c082015260e0810191909152610100015b60405180910390f35b6101026101cd366004610d6a565b61044a565b6101026101e0366004610d40565b610635565b6102056101f3366004610db6565b60056020526000908152604090205481565b6040519081526020016101b6565b6102e8610221366004610d40565b6040805161010081018252600080825260208201819052918101829052606081018290526080810182905260a0810182905260c0810182905260e0810191909152506000908152600360208181526040928390208351610100808201865282546001600160a01b039081168352600184015494830194909452600283015495820195909552928101546060840152600481015460ff80821615156080860152948104909416151560a0840152620100009093041660c082015260059091015460e082015290565b6040516101b69190610dd8565b61020560065481565b600054610311906001600160a01b031681565b6040516001600160a01b0390911681526020016101b6565b610102610337366004610e4d565b6108b9565b61020560015481565b610102610353366004610d40565b610a6c565b61020560025481565b61039661036f366004610e85565b60046020908152600092835260408084209091529082529020805460019091015460ff1682565b604080519283529015156020830152016101b6565b6101026103b9366004610e85565b610c04565b6000828152600360205260409020546001600160a01b031633146104355760405162461bcd60e51b815260206004820152602360248201527f596f7520617265206e6f7420746865206f776e6572206f662074686973206576604482015262195b9d60ea1b60648201526084015b60405180910390fd5b60009182526003602052604090912060010155565b6000828152600360205260409020546001600160a01b031633146104bc5760405162461bcd60e51b815260206004820152602360248201527f596f7520617265206e6f7420746865206f776e6572206f662074686973206576604482015262195b9d60ea1b606482015260840161042c565b60008281526003602052604090206004018054821580156101000261ffff199092169190911760011790915561055557600082815260036020819052604090912001541561053b5760008281526003602081905260409091209081015460029091015461052c90620f4240610ec7565b6105369190610ee4565b61053e565b60005b6000838152600360205260409020600501556105b7565b600082815260036020526040902060020154156105a1576000828152600360208190526040909120600281015491015461059290620f4240610ec7565b61059c9190610ee4565b6105a4565b60005b6000838152600360205260409020600501555b6000828152600360208190526040909120908101546002909101546105dc9190610f06565b6000838152600360205260409020600101546105f89190610ec7565b6000838152600360209081526040808320546001600160a01b0316835260059091528120805490919061062c908490610f06565b90915550505050565b60008181526003602052604090206004015460ff16151560011461069b5760405162461bcd60e51b815260206004820152601560248201527f4576656e74206973206e6f742066696e69736865640000000000000000000000604482015260640161042c565b60008181526003602052604090206004015460ff6101009091041615156001146107075760405162461bcd60e51b815260206004820152601660248201527f596f7520617265206e6f74207468652077696e6e657200000000000000000000604482015260640161042c565b600081815260046020908152604080832033845290915290205461076d5760405162461bcd60e51b815260206004820152601e60248201527f596f752068617665206e6f2062657473206f6e2074686973206576656e740000604482015260640161042c565b60008181526003602052604090206004810154600190910154620100009091046001600160a01b031690819063a9059cbb9033906107ae9061271090610ee4565b6000868152600360205260409020600501546107ce90620f424090610ee4565b6107d9906001610f06565b6107e39190610f19565b60008681526004602090815260408083203384529091529020546108079190610ec7565b6040517fffffffff0000000000000000000000000000000000000000000000000000000060e085901b1681526001600160a01b03909216600483015260248201526044016020604051808303816000875af115801561086a573d6000803e3d6000fd5b505050506040513d601f19601f8201168201806040525081019061088e9190610f2c565b505060009081526004602090815260408083203384529091528120908155600101805460ff19169055565b60008381526003602052604090206004015460ff161561091b5760405162461bcd60e51b815260206004820152601160248201527f4576656e742069732066696e6973686564000000000000000000000000000000604482015260640161042c565b6000838152600360205260409081902060049081015491517f23b872dd000000000000000000000000000000000000000000000000000000008152339181019190915230602482015260448101839052620100009091046001600160a01b03169081906323b872dd906064016020604051808303816000875af11580156109a6573d6000803e3d6000fd5b505050506040513d601f19601f820116820180604052508101906109ca9190610f2c565b5082156109fd57600084815260036020526040812060020180548492906109f2908490610f06565b90915550610a249050565b60008481526003602081905260408220018054849290610a1e908490610f06565b90915550505b50604080518082018252918252911515602080830191825260009485526004815283852033865290529190922091518255516001909101805460ff1916911515919091179055565b6000818152600360205260409020546001600160a01b03163314610ade5760405162461bcd60e51b815260206004820152602360248201527f596f7520617265206e6f7420746865206f776e6572206f662074686973206576604482015262195b9d60ea1b606482015260840161042c565b60008181526003602052604090206004015460ff161515600114610b445760405162461bcd60e51b815260206004820152601560248201527f4576656e74206973206e6f742066696e69736865640000000000000000000000604482015260640161042c565b600081815260036020908152604080832060048082015491546001600160a01b0390811686526005909452938290205491517fa9059cbb000000000000000000000000000000000000000000000000000000008152339481019490945260248401919091526201000090041690819063a9059cbb906044016020604051808303816000875af1158015610bdb573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190610bff9190610f2c565b505050565b60408051610100808201835233825260208083018681526000848601818152606086018281526080870183815260a088018481526001600160a01b038b811660c08b0190815260e08b0187815260068054895260039a8b90529c88208c5181547fffffffffffffffffffffffff000000000000000000000000000000000000000016908516178155985160018a01559551600289015593519787019790975590516004860180549251935161ffff1990931691151561ff00191691909117921515909702919091177fffffffffffffffffffff0000000000000000000000000000000000000000ffff166201000091909516029390931790935590516005909101558254919290610d1483610f49565b9190505550505050565b60008060408385031215610d3157600080fd5b50508035926020909101359150565b600060208284031215610d5257600080fd5b5035919050565b8015158114610d6757600080fd5b50565b60008060408385031215610d7d57600080fd5b823591506020830135610d8f81610d59565b809150509250929050565b80356001600160a01b0381168114610db157600080fd5b919050565b600060208284031215610dc857600080fd5b610dd182610d9a565b9392505050565b6000610100820190506001600160a01b03835116825260208301516020830152604083015160408301526060830151606083015260808301511515608083015260a0830151151560a083015260c0830151610e3e60c08401826001600160a01b03169052565b5060e092830151919092015290565b600080600060608486031215610e6257600080fd5b833592506020840135610e7481610d59565b929592945050506040919091013590565b60008060408385031215610e9857600080fd5b82359150610ea860208401610d9a565b90509250929050565b634e487b7160e01b600052601160045260246000fd5b8082028115828204841417610ede57610ede610eb1565b92915050565b600082610f0157634e487b7160e01b600052601260045260246000fd5b500490565b80820180821115610ede57610ede610eb1565b81810381811115610ede57610ede610eb1565b600060208284031215610f3e57600080fd5b8151610dd181610d59565b600060018201610f5b57610f5b610eb1565b506001019056fea2646970667358221220aee53b8e3c5d86d5b0b5c90187506ba8078fd4f3d54eca880a18cc416ee68abf64736f6c634300081b0033",
+  "devdoc": {
+    "kind": "dev",
+    "methods": {},
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {},
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 53,
+        "contract": "contracts/Bookmaker.sol:Bookmaker",
+        "label": "owner",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_address"
+      },
+      {
+        "astId": 55,
+        "contract": "contracts/Bookmaker.sol:Bookmaker",
+        "label": "bookmakerFee",
+        "offset": 0,
+        "slot": "1",
+        "type": "t_uint256"
+      },
+      {
+        "astId": 57,
+        "contract": "contracts/Bookmaker.sol:Bookmaker",
+        "label": "bookmakerFeePercentage",
+        "offset": 0,
+        "slot": "2",
+        "type": "t_uint256"
+      },
+      {
+        "astId": 62,
+        "contract": "contracts/Bookmaker.sol:Bookmaker",
+        "label": "events",
+        "offset": 0,
+        "slot": "3",
+        "type": "t_mapping(t_uint256,t_struct(Event)51_storage)"
+      },
+      {
+        "astId": 69,
+        "contract": "contracts/Bookmaker.sol:Bookmaker",
+        "label": "bets",
+        "offset": 0,
+        "slot": "4",
+        "type": "t_mapping(t_uint256,t_mapping(t_address,t_struct(Bet)34_storage))"
+      },
+      {
+        "astId": 73,
+        "contract": "contracts/Bookmaker.sol:Bookmaker",
+        "label": "bookmakerFees",
+        "offset": 0,
+        "slot": "5",
+        "type": "t_mapping(t_address,t_uint256)"
+      },
+      {
+        "astId": 75,
+        "contract": "contracts/Bookmaker.sol:Bookmaker",
+        "label": "eventCount",
+        "offset": 0,
+        "slot": "6",
+        "type": "t_uint256"
+      }
+    ],
+    "types": {
+      "t_address": {
+        "encoding": "inplace",
+        "label": "address",
+        "numberOfBytes": "20"
+      },
+      "t_bool": {
+        "encoding": "inplace",
+        "label": "bool",
+        "numberOfBytes": "1"
+      },
+      "t_mapping(t_address,t_struct(Bet)34_storage)": {
+        "encoding": "mapping",
+        "key": "t_address",
+        "label": "mapping(address => struct Bet)",
+        "numberOfBytes": "32",
+        "value": "t_struct(Bet)34_storage"
+      },
+      "t_mapping(t_address,t_uint256)": {
+        "encoding": "mapping",
+        "key": "t_address",
+        "label": "mapping(address => uint256)",
+        "numberOfBytes": "32",
+        "value": "t_uint256"
+      },
+      "t_mapping(t_uint256,t_mapping(t_address,t_struct(Bet)34_storage))": {
+        "encoding": "mapping",
+        "key": "t_uint256",
+        "label": "mapping(uint256 => mapping(address => struct Bet))",
+        "numberOfBytes": "32",
+        "value": "t_mapping(t_address,t_struct(Bet)34_storage)"
+      },
+      "t_mapping(t_uint256,t_struct(Event)51_storage)": {
+        "encoding": "mapping",
+        "key": "t_uint256",
+        "label": "mapping(uint256 => struct Event)",
+        "numberOfBytes": "32",
+        "value": "t_struct(Event)51_storage"
+      },
+      "t_struct(Bet)34_storage": {
+        "encoding": "inplace",
+        "label": "struct Bet",
+        "members": [
+          {
+            "astId": 31,
+            "contract": "contracts/Bookmaker.sol:Bookmaker",
+            "label": "amount",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint256"
+          },
+          {
+            "astId": 33,
+            "contract": "contracts/Bookmaker.sol:Bookmaker",
+            "label": "isTrue",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_bool"
+          }
+        ],
+        "numberOfBytes": "64"
+      },
+      "t_struct(Event)51_storage": {
+        "encoding": "inplace",
+        "label": "struct Event",
+        "members": [
+          {
+            "astId": 36,
+            "contract": "contracts/Bookmaker.sol:Bookmaker",
+            "label": "owner",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_address"
+          },
+          {
+            "astId": 38,
+            "contract": "contracts/Bookmaker.sol:Bookmaker",
+            "label": "bookmakerFee",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_uint256"
+          },
+          {
+            "astId": 40,
+            "contract": "contracts/Bookmaker.sol:Bookmaker",
+            "label": "trueAmount",
+            "offset": 0,
+            "slot": "2",
+            "type": "t_uint256"
+          },
+          {
+            "astId": 42,
+            "contract": "contracts/Bookmaker.sol:Bookmaker",
+            "label": "falseAmount",
+            "offset": 0,
+            "slot": "3",
+            "type": "t_uint256"
+          },
+          {
+            "astId": 44,
+            "contract": "contracts/Bookmaker.sol:Bookmaker",
+            "label": "finished",
+            "offset": 0,
+            "slot": "4",
+            "type": "t_bool"
+          },
+          {
+            "astId": 46,
+            "contract": "contracts/Bookmaker.sol:Bookmaker",
+            "label": "winner",
+            "offset": 1,
+            "slot": "4",
+            "type": "t_bool"
+          },
+          {
+            "astId": 48,
+            "contract": "contracts/Bookmaker.sol:Bookmaker",
+            "label": "token",
+            "offset": 2,
+            "slot": "4",
+            "type": "t_address"
+          },
+          {
+            "astId": 50,
+            "contract": "contracts/Bookmaker.sol:Bookmaker",
+            "label": "finalCoefficient",
+            "offset": 0,
+            "slot": "5",
+            "type": "t_uint256"
+          }
+        ],
+        "numberOfBytes": "192"
+      },
+      "t_uint256": {
+        "encoding": "inplace",
+        "label": "uint256",
+        "numberOfBytes": "32"
+      }
+    }
+  }
+}

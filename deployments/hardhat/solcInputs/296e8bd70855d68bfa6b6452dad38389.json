@@ -1,0 +1,36 @@
+{
+  "language": "Solidity",
+  "sources": {
+    "contracts/Bookmaker.sol": {
+      "content": "// SPDX-License-Identifier: UNLICENSED\npragma solidity ^0.8.15;\n\n// Uncomment this line to use console.log\n// import \"hardhat/console.sol\";\n\ninterface IERC20 {\n    function transfer(address to, uint256 amount) external returns (bool);\n    function transferFrom(address from, address to, uint256 amount) external returns (bool);\n    function balanceOf(address account) external view returns (uint256);\n}\n\nstruct Bet {\n    uint256 amount;\n    bool isTrue;\n}\n\nstruct Event {\n    address owner;\n    uint256 bookmakerFee;\n    uint256 trueAmount;\n    uint256 falseAmount;\n    bool finished;\n    bool winner;\n    address token;\n    uint256 finalCoefficient;\n}\n\ncontract Bookmaker {\n    address public owner;\n    uint public bookmakerFee;\n    uint public bookmakerFeePercentage;\n\n    mapping(uint256 => Event) public events;\n    mapping(uint256 => mapping(address => Bet)) public bets;\n    mapping(address => uint256) public bookmakerFees;\n    uint256 public eventCount;\n\n    constructor() {}\n    \n    function createEvent(uint256 _bookmakerFee, address _token) public {\n        Event memory _event = Event({\n            owner: msg.sender,\n            bookmakerFee: _bookmakerFee,\n            trueAmount: 0,\n            falseAmount: 0,\n            finished: false,\n            winner: false,\n            token: _token,\n            finalCoefficient: 0\n        });\n        events[eventCount] = _event;\n        eventCount++;\n    }\n\n    function getEvent(uint256 _eventId) public view returns (Event memory) {\n        return events[_eventId];\n    }\n\n    function editEvent(uint256 _eventId, uint256 _bookmakerFee) public {\n        require(msg.sender == events[_eventId].owner, \"You are not the owner of this event\");\n        events[_eventId].bookmakerFee = _bookmakerFee;\n    }\n\n    function finishEvent(uint256 _eventId, bool _winner) public {\n        require(msg.sender == events[_eventId].owner, \"You are not the owner of this event\");\n        events[_eventId].finished = true;\n        events[_eventId].winner = _winner;\n        if (_winner) {\n            events[_eventId].finalCoefficient = events[_eventId].falseAmount == 0 ? 0 : events[_eventId].trueAmount * 1000000 / events[_eventId].falseAmount;\n        } else {\n            events[_eventId].finalCoefficient = events[_eventId].trueAmount == 0 ? 0 : events[_eventId].falseAmount * 1000000 / events[_eventId].trueAmount;\n        }\n        bookmakerFees[events[_eventId].owner] += events[_eventId].bookmakerFee * (events[_eventId].trueAmount + events[_eventId].falseAmount);\n    }\n\n    function bet(uint256 _eventId, bool _isTrue, uint256 _amount) public {\n        require(events[_eventId].finished == false, \"Event is finished\");\n        \n        IERC20 token = IERC20(events[_eventId].token);\n        token.transferFrom(msg.sender, address(this), _amount);\n\n        if (_isTrue) {\n            events[_eventId].trueAmount += _amount;\n        } else {\n            events[_eventId].falseAmount += _amount;\n        }\n\n        bets[_eventId][msg.sender] = Bet({\n            amount: _amount,\n            isTrue: _isTrue\n        });\n    }\n    \n    function withdraw(uint256 _eventId) public {\n        require(events[_eventId].finished == true, \"Event is not finished\");\n        require(events[_eventId].winner == true, \"You are not the winner\");\n        require(bets[_eventId][msg.sender].amount > 0, \"You have no bets on this event\");\n\n        IERC20 token = IERC20(events[_eventId].token);\n        token.transfer(msg.sender, bets[_eventId][msg.sender].amount * (1 + events[_eventId].finalCoefficient / 1000000 - events[_eventId].bookmakerFee / 10000));\n        \n        delete bets[_eventId][msg.sender];\n    }\n\n    function withdrawBookmaker(uint256 _eventId) public {\n        require(msg.sender == events[_eventId].owner, \"You are not the owner of this event\");\n        require(events[_eventId].finished == true, \"Event is not finished\");\n\n        IERC20 token = IERC20(events[_eventId].token);\n        token.transfer(msg.sender, bookmakerFees[events[_eventId].owner]);\n    }\n}\n"
+    }
+  },
+  "settings": {
+    "optimizer": {
+      "enabled": true,
+      "runs": 1000
+    },
+    "evmVersion": "paris",
+    "outputSelection": {
+      "*": {
+        "*": [
+          "abi",
+          "evm.bytecode",
+          "evm.deployedBytecode",
+          "evm.methodIdentifiers",
+          "metadata",
+          "devdoc",
+          "userdoc",
+          "storageLayout",
+          "evm.gasEstimates"
+        ],
+        "": [
+          "ast"
+        ]
+      }
+    },
+    "metadata": {
+      "useLiteralContent": true
+    }
+  }
+}
